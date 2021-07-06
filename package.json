@@ -30,7 +30,7 @@
     "benchmark": "npm run build:node && node tests/run-bench tests/Benchmarks/YGBenchmark.js"
   },
   "main": "lib/api.js",
-  "types": "lib/api/api.d.ts",
+  "types": "lib/api.d.ts",
   "directories": {
     "test": "tests"
   },
