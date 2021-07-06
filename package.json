@@ -1,6 +1,6 @@
 {
   "name": "@play-co/typeflex",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Typescript implementation of CSS flexbox layout algorithm, a pure typescript port of Facebook's Yoga",
   "license": "MIT",
   "repository": {
