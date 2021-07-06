@@ -1,32 +1,38 @@
 {
-  "name": "typeflex",
+  "name": "@play-co/typeflex",
   "version": "0.0.1",
   "description": "Typescript implementation of CSS flexbox layout algorithm, a pure typescript port of Facebook's Yoga",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/play-co/typeflex.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "mocha": "^5.2.0",
     "ts-loader": "^4.4.2",
     "ts-node": "^7.0.0",
-    "typescript": "^2.9.2",
+    "typescript": "4.0.3",
     "uglifyjs": "^2.4.11",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "test": "yarn build && mocha --expose-gc -r tests/tools.js tests/Facebook.Yoga/**/*.js",
-    "benchmark": "yarn build && node tests/run-bench tests/Benchmarks/YGBenchmark.js"
+    "build": "rm -rf lib && ! tsc",
+    "build:node": "rm -rf node && ! tsc -p tsconfig.node.json",
+    "check": "tsc --noEmit",
+    "test": "npm run build:node && mocha --expose-gc -r tests/tools.js tests/Facebook.Yoga/**/*.js",
+    "benchmark": "npm run build:node && node tests/run-bench tests/Benchmarks/YGBenchmark.js"
   },
-  "main": "dist/Yoga.js",
-  "types": "dist/out/api.d.ts",
+  "main": "lib/api.js",
+  "types": "lib/api/api.d.ts",
   "directories": {
     "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dead/typeflex.git"
   },
   "keywords": [
     "flex",

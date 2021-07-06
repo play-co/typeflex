@@ -26,7 +26,7 @@ for (let type of [`node`]) {
     vm.runInNewContext(
       file,
       Object.assign(Object.create(global), {
-        Yoga: require(`../dist/Yoga.js`),
+        Yoga: require(`../node/api.js`),
         YGBENCHMARK: function(name, fn) {
           let testEntry = testResults.get(name);
 

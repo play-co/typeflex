@@ -17,5 +17,6 @@
         "tuple": "cpp",
         "utility": "cpp",
         "xmemory0": "cpp"
-    }
+    },
+    "editor.codeActionsOnSave": null
 }
