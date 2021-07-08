@@ -3,7 +3,7 @@
     "lib": ["es6", "dom"],
     "module": "es6",
     "moduleResolution": "node",
-    "target": "es3",
+    "target": "ES2015",
     "declaration": true,
     "sourceMap": true,
     "outDir": "./lib",
@@ -11,6 +11,6 @@
     "strict": true,
     "strictNullChecks": false,
     "esModuleInterop": true,
-    "sourceRoot": "./src"
+    "sourceRoot": "../src"
   }
 }

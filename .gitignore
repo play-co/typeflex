@@ -4,4 +4,4 @@ src/*.map
 out/
 dist/
 lib/
-node/
+tests/lib/

@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-var Yoga = Yoga || require("../../node/api.js");
+var Yoga = Yoga || require("../lib/api.js");
 
 var ITERATIONS = 2000;
 

@@ -221,7 +221,7 @@ export function YGNodeNew(): YGNode {
 }
 
 export function YGNodeClone(oldNode: YGNode) {
-    console.log('clone?')
+    // console.log('clone?')
     const node: YGNode = new YGNode(oldNode);
     gNodeInstanceCount++;
     node.setOwner(null);
@@ -3664,7 +3664,7 @@ export function YGNodeCalculateLayout(
 
     if (node.getConfig().shouldDiffLayoutWithoutLegacyStretchBehaviour &&
         node.didUseLegacyFlag()) {
-        console.log('legacy config')
+        // console.log('legacy config')
         const originalNode: YGNode = YGNodeDeepClone(node);
         originalNode.resolveDimension();
 

@@ -101,7 +101,7 @@ class YGNode {
                 ) {
         
         if (contextOrNodeOrConfig instanceof YGNode) {
-            console.log('from node')
+            // console.log('from node')
             this.fromNode(contextOrNodeOrConfig);
             return;
         }
@@ -140,7 +140,7 @@ class YGNode {
     }
 
     fromNode(node: YGNode): void {
-        console.log(node);
+        // console.log(node);
         
         this.context_ = node.context_;
         this.print_ = node.print_;
